@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Farman's personal portfolio - frontend developer using HTML, CSS, JavaScript, React.">
+  <meta name="keywords" content="Farman, Frontend Developer, HTML, CSS, JavaScript, React">
+  <meta name="author" content="Farman">
+  <title>Farman | Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #121212;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      padding: 3rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p#typing {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    .card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skills li {
+      background: #0d6efd;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(13, 110, 253, 0.4);
+    }
+    .btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .btns a {
+      background: #0d6efd;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btns a:hover {
+      background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      color: #bbb;
+    }
+    a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #66b2ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="name">Farman</h1>
+      <p id="typing">Frontend Developer | JavaScript Enthusiast</p>
+      <div class="btns">
+        <a href="resume.pdf" download>Download Resume</a>
+        <a href="https://github.com/farmanraza-2321" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/farman-raza-a7363a374" target="_blank">LinkedIn</a>
+      </div>
+    </header>
+
+    <section class="card" id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Farman</strong>, a passionate frontend developer who loves building beautiful and interactive websites. I enjoy learning new technologies and turning creative ideas into stunning digital experiences. I specialize in responsive design and love working with modern UI.</p>
+    </section>
+
+    <section class="card skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+      </ul>
+    </section>
+
+    <section class="card" id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>My Portfolio Website</li>
+        <li>Weather App using JavaScript</li>
+        <li>ToDo List App with React</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p>You can reach me at: <a href="https://www.linkedin.com/in/farman-raza-a7363a374">linkedin
+      </a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Farman. Crafted with ❤️ using HTML, CSS, JavaScript & React.</p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    class HelloReact extends React.Component {
+      render() {
+        return React.createElement('p', null, 'This interactive part is powered by React!');
+      }
+    }
+
+    const reactRoot = document.createElement('div');
+    document.getElementById('about').appendChild(reactRoot);
+    const root = ReactDOM.createRoot(reactRoot);
+    root.render(React.createElement(HelloReact));
+  </script>
+
+  <!-- React via CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</body>
+</html>
